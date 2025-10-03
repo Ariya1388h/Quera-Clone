@@ -278,6 +278,63 @@ body {
   height: auto;
 }
 
+.stats-section {
+  padding: 50px 20px;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.stat-card { 
+  background: white; 
+  border-radius: 8px; /* slightly rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 131, 199, 0.2); /* subtle blue shadow */
+  text-align: center; 
+  padding: 30px 20px; 
+  flex: 1 1 250px; 
+  max-width: 300px; 
+  transition: transform 0.2s, box-shadow 0.2s; /* optional hover effect */
+}
+
+/* Optional: make it pop slightly on hover */
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 131, 199, 0.25);
+}
+
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0083c7;
+  margin-bottom: 10px;
+}
+
+.stat-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.stat-description {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .jobs-container {
