@@ -326,6 +326,166 @@ body {
   line-height: 1.4;
 }
 
+/* CSS (no variables) */
+.partners-section {
+  direction: rtl;                 /* ensure text direction */
+  font-family: "Tahoma", sans-serif;
+  max-width: 920px;              /* narrower centered content */
+  margin: 0 auto;
+  padding: 48px 16px;
+  color: #333333;
+  box-sizing: border-box;
+}
+
+/* Generic row container (two-column grid) */
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two equal columns */
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+/* explicit placement for top / bottom rows */
+.top-row {
+  grid-template-areas: "logos text";   /* logos = left column, text = right column */
+}
+.bottom-row {
+  grid-template-areas: "text logos";   /* text = left column, logos = right column */
+}
+
+/* assign grid areas */
+.top-row .logos,
+.bottom-row .logos {
+  grid-area: logos;
+}
+.top-row .text-box,
+.bottom-row .text-box {
+  grid-area: text;
+}
+
+/* Text box styling (right aligned text) */
+.text-box {
+  text-align: right;
+  padding: 6px 12px;
+}
+
+.text-box h2 {
+  font-size: 20px;
+  line-height: 1.25;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+  color: #222222;
+}
+
+.text-box p {
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.7;
+  margin: 0 0 16px 0;
+}
+
+.text-box .btn {
+  display: inline-block;
+  border: 1px solid #00a3ff;
+  color: #00a3ff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 180ms ease, color 180ms ease, transform 120ms ease;
+  cursor: pointer;
+}
+
+.text-box .btn:hover,
+.text-box .btn:focus {
+  background: #00a3ff;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* Logos grid (keeps logos tidy inside its grid-area) */
+.logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 18px;
+  align-items: center;
+  justify-items: center;   /* centers each logo inside its cell */
+}
+
+/* logo images */
+.logos img {
+  width: 76px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.85;
+  transition: filter 160ms ease, opacity 160ms ease, transform 160ms ease;
+  display: block;
+}
+
+.logos img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* Slight visual tuning: reduce bottom margin for the last row */
+.row:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+/* medium screens: slightly smaller items */
+@media (max-width: 1024px) {
+  .partners-section {
+    padding: 36px 14px;
+  }
+  .logos img { width: 66px; }
+  .text-box h2 { font-size: 18px; }
+  .text-box p { font-size: 13px; }
+}
+
+/* tablet / small desktop: stack vertically — text first, then logos */
+@media (max-width: 768px) {
+  .row {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 16px;
+  }
+
+  /* ensure stacking order: text first, logos below for both rows */
+  .top-row { grid-template-areas: "text" "logos"; }
+  .bottom-row { grid-template-areas: "text" "logos"; }
+
+  .text-box {
+    padding: 0;
+    text-align: right;
+  }
+
+  .logos {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 14px;
+    justify-items: center; /* center logos on mobile */
+  }
+
+  .logos img { width: 60px; }
+  .partners-section { padding: 28px 12px; }
+}
+
+/* small phones: compact sizes */
+@media (max-width: 480px) {
+  .partners-section { padding: 20px 12px; }
+  .text-box h2 { font-size: 16px; line-height: 1.4; }
+  .text-box p { font-size: 12px; line-height: 1.6; }
+  .text-box .btn { font-size: 13px; padding: 6px 14px; }
+  .logos { gap: 10px; grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); }
+  .logos img { width: 52px; }
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
   .stats-container {
@@ -408,4 +568,3 @@ body {
     font-size: 13px;
   }
 }
-
