@@ -436,6 +436,204 @@ body {
   margin-bottom: 0;
 }
 
+/* Background wrapper with subtle gradient */
+.cta-section {
+  background: linear-gradient(to bottom left, #e6f9ff, #ffffff);
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* White box */
+.cta-box {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06); /* slight shadow underneath */
+  padding: 40px 30px;
+  max-width: 700px;
+  text-align: center;
+}
+
+/* Heading */
+.cta-box h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #222222;
+  margin: 0 0 12px;
+}
+
+/* Sub text */
+.cta-box p {
+  font-size: 14px;
+  color: #555555;
+  margin: 0 0 24px;
+}
+
+/* Button container */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Base button */
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+/* Primary filled button */
+.btn-primary {
+  background: #0077b6;
+  color: #ffffff;
+  border: 1px solid #0077b6;
+}
+.btn-primary:hover {
+  background: #005f8e;
+  border-color: #005f8e;
+}
+
+/* Outline button */
+.btn-outline {
+  background: transparent;
+  color: #0077b6;
+  border: 1px solid #0077b6;
+}
+.btn-outline:hover {
+  background: #0077b6;
+  color: #ffffff;
+}
+
+.site-footer {
+  background: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  padding: 50px 20px;
+  font-family: "Tahoma", sans-serif;
+  color: #222222;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Brand column */
+.footer-brand {
+  text-align: center;
+}
+
+.footer-logo {
+  width: 70px;
+  margin-bottom: 10px;
+}
+
+.footer-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.footer-social a {
+  font-size: 18px;
+  color: #444444;
+  transition: 0.2s;
+}
+.footer-social a:hover {
+  color: #0077b6;
+}
+
+/* Columns */
+.footer-col h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #222222;
+}
+
+.footer-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #444444;
+  font-size: 13px;
+  transition: 0.2s;
+}
+.footer-col ul li a:hover {
+  color: #0077b6;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .footer-brand {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-col {
+    margin-bottom: 25px;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}
+
+
+/* Responsive: stack buttons on small screens */
+@media (max-width: 480px) {
+  .cta-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
 /* ---------------- RESPONSIVE ---------------- */
 
 /* medium screens: slightly smaller items */
