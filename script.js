@@ -11,17 +11,17 @@ const toggleBtn = document.querySelector(".header__toggle");
   const STAGGER_CAP = 800;
 
   const configMap = [
-    { sel: '.header__logo',         type: 'reveal-up' },
-    { sel: '.header__nav li',       type: 'reveal-right' },
-    { sel: '.header__actions > *',  type: 'reveal-left' },
-    { sel: '.hero__content',        type: 'reveal-up' },
-    { sel: '.jobs-item',            type: 'reveal-up',   stagger: true },
-    { sel: '.jobs-image',           type: 'reveal-right' },
-    { sel: '.stat-card',            type: 'reveal-up',   stagger: true },
-    { sel: '.text-box',             type: 'reveal-up' },
-    { sel: '.logos img',            type: 'reveal-fade', stagger: true },
-    { sel: '.cta-box',              type: 'reveal-up' },
-    { sel: '.footer-col',           type: 'reveal-up',   stagger: true }
+    { sel: '.header__logo', type: 'reveal-up' },
+    { sel: '.header__nav li', type: 'reveal-right' },
+    { sel: '.header__actions > *', type: 'reveal-left' },
+    { sel: '.hero__content', type: 'reveal-up' },
+    { sel: '.jobs-item', type: 'reveal-up',   stagger: true },
+    { sel: '.jobs-image', type: 'reveal-right' },
+    { sel: '.stat-card', type: 'reveal-up',   stagger: true },
+    { sel: '.text-box', type: 'reveal-up' },
+    { sel: '.logos img', type: 'reveal-fade', stagger: true },
+    { sel: '.cta-box', type: 'reveal-up' },
+    { sel: '.footer-col', type: 'reveal-up',   stagger: true }
   ];
 
   const observerOptions = {
